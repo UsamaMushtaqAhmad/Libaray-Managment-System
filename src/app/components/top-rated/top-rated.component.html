@@ -1,0 +1,25 @@
+<div class="bg-zinc-900  py-10 px-6">
+  <h2 class="text-white text-3xl font-bold text-center mb-10">New Collection</h2>
+  
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <!-- Book Card -->
+    <div *ngFor="let book of books" class="bg-zinc-800 text-white rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+      <!-- Book Cover Image -->
+      <div class="h-64 overflow-hidden">
+        <img [src]="book.image" [alt]="book.title" class="w-full h-full object-cover">
+      </div>
+      
+      <!-- Book Details -->
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-1">{{ book.title }}</h3>
+        <p class="text-sm text-gray-400 mb-2">by {{ book.author }}</p>
+        <p class="text-sm text-gray-300 mb-4">{{ book.description }}</p>
+        
+        <div class="flex justify-between items-center text-sm">
+          <span class="bg-green-600 px-3 py-1 rounded-full">Price: Rs {{ book.price }}</span>
+          <span class="bg-blue-600 px-3 py-1 rounded-full">Rent/day: Rs {{ book.rent }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

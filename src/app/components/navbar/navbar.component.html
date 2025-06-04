@@ -1,0 +1,84 @@
+<!-- navbar.component.html -->
+<div class="fixed top-0 left-0 w-full flex justify-between items-center h-20 bg-transparent z-50 px-4 md:px-8 backdrop-blur-sm transition-all duration-300 hover:backdrop-blur-md">
+  <!-- Logo -->
+  <div>
+    <a routerLink="/home" class="text-3xl font-extrabold text-red-500 hover:text-red-400 transition-colors duration-300">
+      <span class="drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]">U-LMS</span>
+    </a>
+  </div>
+  
+  <!-- Desktop Navigation Links -->
+  <nav class="hidden md:block">
+    <ul class="flex gap-8">
+      <li>
+        <a routerLink="/home" routerLinkActive="text-red-400" [routerLinkActiveOptions]="{exact: true}" 
+           class="relative text-white hover:text-red-300 transition-colors duration-200 group">
+          HOME
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/books" routerLinkActive="text-red-400" [routerLinkActiveOptions]="{exact: true}" 
+           class="relative text-white hover:text-red-300 transition-colors duration-200 group">
+          BOOKS
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/about" routerLinkActive="text-red-400" [routerLinkActiveOptions]="{exact: true}" 
+           class="relative text-white hover:text-red-300 transition-colors duration-200 group">
+          ABOUT US
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/orders" routerLinkActive="text-red-400" [routerLinkActiveOptions]="{exact: true}" 
+           class="relative text-white hover:text-red-300 transition-colors duration-200 group">
+          ORDERS
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/contact" routerLinkActive="text-red-400" [routerLinkActiveOptions]="{exact: true}" 
+           class="relative text-white hover:text-red-300 transition-colors duration-200 group">
+          CONTACT US
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Menu Button -->
+  <button (click)="toggleMenu()" class="md:hidden text-white focus:outline-none">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+
+  <!-- User Profile -->
+  <div class="relative group">
+    <div class="flex justify-center items-center rounded-full h-10 w-10 cursor-pointer border-2 border-transparent hover:border-red-400 transition-all duration-300">
+      <img src="assets/images/dashboard.icon.jpg" alt="User Profile" class="rounded-full h-full w-full object-cover">
+    </div>
+    
+    <!-- Dropdown Menu -->
+    <div class="absolute right-0 mt-2 w-48 bg-zinc-800/90 backdrop-blur-lg rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 origin-top-right">
+      <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-red-500/20 hover:text-red-300">Dashboard</a>
+      <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-red-500/20 hover:text-red-300">My Account</a>
+      <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-red-500/20 hover:text-red-300">Settings</a>
+      <div class="border-t border-zinc-700 my-1"></div>
+      <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-red-500/20 hover:text-red-300">Sign out</a>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Menu -->
+<div [class.hidden]="!isMenuOpen" class="md:hidden fixed top-20 left-0 w-full bg-zinc-900/95 backdrop-blur-lg z-40 py-4 px-8 transition-all duration-300">
+  <ul class="space-y-4">
+    <li><a (click)="closeMenu()" routerLink="/home" class="block text-white hover:text-red-400">HOME</a></li>
+    <li><a (click)="closeMenu()" routerLink="/books" class="block text-white hover:text-red-400">BOOKS</a></li>
+    <li><a (click)="closeMenu()" routerLink="/about" class="block text-white hover:text-red-400">ABOUT US</a></li>
+    <li><a (click)="closeMenu()" routerLink="/orders" class="block text-white hover:text-red-400">ORDERS</a></li>
+    <li><a (click)="closeMenu()" routerLink="/contact" class="block text-white hover:text-red-400">CONTACT US</a></li>
+  </ul>
+</div>

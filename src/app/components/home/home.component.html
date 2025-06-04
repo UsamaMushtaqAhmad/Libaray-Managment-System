@@ -1,0 +1,122 @@
+<div class="relative">
+  <!-- Hero Section with Improved Overlay -->
+  <div class="home-container relative">
+    <div class="overlay bg-gradient-to-b from-black/30 to-black/70"></div>
+    
+    <div class="overlay-text text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fadeIn">
+        Welcome to <span class="text-red-500 font-extrabold">U-Library</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fadeIn delay-100">
+        Discover, learn, and grow with our collection of 50,000+ books and digital resources
+      </p>
+      
+      <!-- Search Bar -->
+      <div class="relative max-w-xl mx-auto animate-fadeIn delay-200">
+        <input type="text" 
+               placeholder="Search books, authors, or topics..." 
+               class="w-full py-4 px-6 rounded-full bg-white/90 text-zinc-800 focus:outline-none focus:ring-2 focus:ring-red-500 shadow-lg">
+        <button class="absolute right-2 top-2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Quick Stats -->
+      <div class="flex justify-center gap-6 mt-12 animate-fadeIn delay-300">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-red-400">50K+</div>
+          <div class="text-sm">Books Available</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-red-400">24/7</div>
+          <div class="text-sm">Access</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-red-400">100+</div>
+          <div class="text-sm">New Arrivals Weekly</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scrolling Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="bg-zinc-900">
+    <!-- Featured Categories -->
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-white mb-12">
+        Explore <span class="text-red-500">Categories</span>
+      </h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="category-card bg-zinc-800 hover:bg-zinc-700 rounded-xl p-6 text-center transition-all hover:-translate-y-2">
+          <div class="bg-red-500/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-white">Science & Tech</h3>
+          <p class="text-sm text-zinc-400 mt-1">1,200+ Books</p>
+        </div>
+        
+        <!-- Add 3 more category cards here -->
+      </div>
+    </div>
+    
+    <!-- Top Rated Books Section -->
+    <div class="py-8">
+      <app-top-rated></app-top-rated>
+    </div>
+    
+    <!-- Testimonials -->
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-white mb-12">
+        What Our <span class="text-red-500">Readers Say</span>
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-zinc-800 p-6 rounded-xl">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 flex">
+              <!-- 5 star rating -->
+              ★★★★★
+            </div>
+          </div>
+          <p class="text-zinc-300 mb-4">"U-Library transformed my reading habits. The collection is incredible and the platform is so easy to use!"</p>
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="User" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <h4 class="font-medium text-white">Ayesha Khan</h4>
+              <p class="text-xs text-zinc-400">Student, Karachi</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Add 2 more testimonials -->
+      </div>
+    </div>
+    
+    <!-- Call to Action -->
+    <div class="bg-gradient-to-r from-red-600 to-red-800 py-16">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-3xl font-bold text-white mb-6">Ready to start your reading journey?</h2>
+        <p class="text-xl text-red-100 mb-8">Join thousands of readers accessing our library anytime, anywhere.</p>
+        <button class="bg-white text-red-600 hover:bg-zinc-100 font-bold py-3 px-8 rounded-full text-lg transition-colors shadow-lg">
+          Get Started Now
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
